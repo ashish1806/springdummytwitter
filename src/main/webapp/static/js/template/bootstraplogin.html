@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+
+    <!--<script type="text/javascript" src="jquery-1.10.2.min.js"></script>-->
+    <script type="text/javascript" src="bootstrap.min.js"></script>
+    <!--<link href="http://twitter-bootstrap-v2\docs\assets\css\bootstrap.css" rel="stylesheet">-->
+    <!--<link href="http://twitter-bootstrap-v2\docs\assets\css\bootstrap-responsive.css" rel="stylesheet">-->
+    <!--<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">-->
+    <title></title>
+</head>
+<body>
+
+
+<!--login modal-->
+<!--login modal-->
+<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h1 class="text-center">Login</h1>
+            </div>
+            <div class="modal-body">
+                <form class="form col-md-12 center-block">
+                    <div class="form-group">
+                        <input type="text" name="username" id="username" class="form-control input-lg"  placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control input-lg"  placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button onclick="checkusername(this.form)" class="btn btn-primary btn-lg btn-block">  Sign In</button>
+                        <button onclick="gotoregisterpage(this.form)" class="btn btn-secondary btn-lg btn-block">  Register</button>
+                        <!--<span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help? </a></span>-->
+                    </div>
+                </form>
+                <script language="javascript">
+                    function checkusername(form)/*function to check userid & password*/
+                    {
+                        console.log("batman");
+                        /*the following code checkes whether the entered userid and password are matching*/
+                        if(form.username.value == "myuserid" && form.password.value == "mypswrd")
+                        {
+                            console.log("Redirecting to dashboard in 10 seconds");
+                            window.open('index.html');
+
+//                            setTimeout(function(){
+//                                window.open('index.html');
+//                            },2000);
+//                            window.open('navbar.html')/*opens the target page while Id & password matches*/
+                        }
+                        else
+                        {
+                            alert("Error Password or Username")/*displays error message*/
+                        }
+                    }
+                    function gotoregisterpage(form)
+                    {
+                        window.open('registernew.html');
+                    }
+
+                </script>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

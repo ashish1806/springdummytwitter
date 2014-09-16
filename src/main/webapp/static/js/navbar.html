@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <h1>WELCOME TO TWITTER SENTIMENT ANALYSER</h1>
+    <meta charset="utf-8">
+    <title>jQuery UI Autocomplete - Default functionality</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <!--<script src="highmaps.js"></script>-->
+    <!--<script src="data.js"></script>-->
+    <!--<script src="USA.js"></script>-->
+    <!--<script src="INDIA.js"></script>-->
+    <!--<script src="PAK.js"></script>-->
+    <!--<script src="WORLD.js"></script>-->
+    <!--<script src="WORLDchart.js"></script>-->
+    <!--<script src="http://code.highcharts.com/maps/highmaps.js"></script>-->
+    <!--<script src="http://code.highcharts.com/maps/modules/exporting.js"></script>-->
+    <!--<script src="http://code.highcharts.com/mapdata/countries/in/in-all.js"></script>-->
+    <!--<script src="http://code.highcharts.com/mapdata/countries/pk/pk-all.js"></script>-->
+    <!--<script src="http://code.highcharts.com/mapdata/countries/us/us-all.js"></script>-->
+    <!--<script src="http://code.highcharts.com/maps/highmaps.js"></script>-->
+    <!--<script src="http://code.highcharts.com/maps/modules/exporting.js"></script>-->
+    <!--<script src="http://code.highcharts.com/mapdata/custom/world.js"></script>-->
+    <script src="dropdown.js"></script>
+
+
+    <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+
+    <script src="senddata.js"></script>
+
+    <script src="dashboardstyle.css"></script>
+    <script src="addremovebutton.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<link rel="stylesheet" type="text/css" href="/main/webapp/static/js/dashboardstyle.css">-->
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+    <script>
+
+        $(function() {
+
+            $.getJSON("demo_ajax_json.js",function(result){
+                $.each(result, function(i, field){
+                    $("div").append(field + " ");
+                });
+            });
+
+            console.log("2");
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $( "#tags1" ).autocomplete({
+                source: availableTags
+            });
+            $( "#tags2" ).autocomplete({
+                source: availableTags
+            });
+        });
+
+    </script>
+
+
+
+
+
+
+    <script src="jquery-1.6.2.min.js"></script>
+    <script src="jquery-ui-1.8.15.custom.min.js"></script>
+    <link rel="stylesheet" href="jqueryCalendar.css">
+    <script>
+        $("#startdate").ready(function () {
+            jQuery(function () {
+                jQuery("#startdate").datepicker();
+            });
+        });
+    </script>
+
+
+    <script>
+        $("#enddate").ready(function () {
+            jQuery(function () {
+                jQuery("#enddate").datepicker();
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+    function GetDynamicTextBox(value){
+        return '<input name = "DynamicTextBox" type="text" value = "' + value + '" />' +
+                '<input type="button" value="Remove" onclick = "RemoveTextBox(this)" />'
+    }
+
+    $(document).ready(function(){
+
+        var counter = 2;
+
+        $("#addButton").click(function () {
+            console.log("aswerqhgfd");
+
+//
+
+
+            if(counter>10){
+                alert("Only 10 textboxes allow");
+                return false;
+            }
+
+            var newTextBoxDiv = $(document.createElement('div'))
+                    .attr("id", 'TextBoxDiv' + counter);
+
+//            newTextBoxDiv.after().html('<label>Textbox #'+ counter + ' : </label>' +
+//                    '<input type="text" name="textbox' + counter +
+//                    '" id="textbox' + counter + '" value="" >');
+
+            newTextBoxDiv.appendTo("#TextBoxesGroup");
+            console.log("i ma ht");
+
+
+            counter++;
+        });
+
+        $("#removeButton").click(function () {
+            if(counter==1){
+                alert("No more textbox to remove");
+                return false;
+            }
+
+            counter--;
+
+            $("#TextBoxDiv" + counter).remove();
+
+        });
+
+        $("#getButtonValue").click(function () {
+
+            var msg = '';
+            for(i=1; i<counter; i++){
+                msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+            }
+            alert(msg);
+        });
+    });
+
+</script>
+
+
+<!--<div class="row">-->
+<!--<div class="col-md-12">-->
+<!--<div class="well well-sm">-->
+<!--<form class="form-horizontal" method="post">-->
+<!--<fieldset>-->
+<!--<legend class="text-center header" >Add Entity</legend>-->
+
+<!--<div class="form-group">-->
+<!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>-->
+<!--<div class="col-md-8">-->
+<!--<input id="Entityname" name="Entityname" type="text" placeholder="Entityname" class="form-control">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+<!--<div class="col-md-8">-->
+<!--<input type="Modelname1" name="Modelname1" id="Modelname1" class="form-control input-lg"  placeholder="Modelname1">-->
+
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="form-group">-->
+<!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+<!--<div class="col-md-8">-->
+<!--<input type="Modelname2" name="Modelname2" id="Modelname2" class="form-control input-lg"  placeholder="Modelname2">-->
+
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="form-group">-->
+<!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+<!--<div class="col-md-8">-->
+<!--<input type="Modelname3" name="Modelname3" id="Modelname3" class="form-control input-lg"  placeholder="Modelname3">-->
+
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="form-group">-->
+<!--<div class="col-md-12 text-center">-->
+<!--<button type="submit" class="btn btn-primary btn-lg">Submit</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</fieldset>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+
+
+<!--<div class="contain" style="width: 100px">-->
+
+<nav class="navbar navbar-default"  role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            </div>
+
+
+
+
+
+
+            <!--<div class="btn-group">-->
+                <!--<a class="btn btn-primary btn-lg btn-block"  id="myflag2" style="margin-top: 5%; margin-left: 25%;" data-toggle="dropdown" href="#">-->
+                    <!--Time Limit-->
+                    <!--<span class="caret"></span>-->
+                <!--</a>-->
+                <!--&lt;!&ndash;<ul id="TimeLimitlist2" class="dropdown-menu">&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash; dropdown menu links &ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li><a href="#">10 Mins</a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li><a href="#">1 Hr</a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li><a href="#">5 Hrs</a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li><a href="#">10 Hrs</a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li><a href="#">1 Day</a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li><a href="#">All</a></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">Separated link</a></li>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+            <!--</div>-->
+
+
+
+
+
+
+
+            <!--<div id="custom-login">-->
+            <!--<!--Hello <strong>Admin</strong>, Check your <strong><a href="">Account</a></strong> or <a href="/logout">Log Out</a>-->
+            <!--<div id="user-bar"><div class="login-button">-->
+                <!--<a class="login-link" href="javascript:void(0);">-->
+                    <!--<span>Login</span>-->
+                <!--</a>-->
+    		<!--<span class="login-box"><form action="/node?destination=node"  accept-charset="UTF-8" method="post" id="user-login-form">-->
+                <!--<div><div class="login-label"><span>Username (New User? <a href="/user/register/"><span>Signup</span></a>)</span> <span>Password (<a href="/user/password"><span>Forgot Password?</span></a>)</span></div><div class="form-item" id="edit-name-wrapper">-->
+                    <!--<input type="text" maxlength="60" name="name" id="edit-name" size="15" value="" class="form-text required input" />-->
+                <!--</div>-->
+                    <!--<div class="form-item" id="edit-pass-wrapper">-->
+                        <!--<input type="password" name="pass" id="edit-pass"  maxlength="60"  size="15"  class="form-text required input" />-->
+                    <!--</div>-->
+                    <!--<input type="image" name="submit" id="edit-submit"  class="form-submit" src="/sites/all/themes/abessive/images/fbconnect/go-button.gif" />-->
+                    <!--<input type="hidden" name="form_build_id" id="form-a4a8d3d65f2eaf01dd9b0d961bc84e77" value="form-a4a8d3d65f2eaf01dd9b0d961bc84e77"  />-->
+                    <!--<input type="hidden" name="form_id" id="edit-user-login-block" value="user_login_block"  />-->
+
+                <!--</div></form>-->
+<!--</span>-->
+            <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+
+            <!--<a class="navbar-brand" href="#">Brand</a>-->
+
+
+
+
+
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+            <!--<div class="form-group">-->
+                <!--<div style="margin-top: 5%" class="col-md-6 text-center">-->
+                    <!--<button type="submit" id="logout" class="btn btn-primary btn-lg">Logout</button>-->
+                <!--</div>-->
+
+
+
+            <!--<div class="btn-group">-->
+                <!--<a class="btn btn-primary btn-lg btn-block" id="myflag1" style="margin-top: 5%; margin-left: 25%;" data-toggle="dropdown" href="#">-->
+                    <!--Time Limit-->
+                    <!--<span class="caret"></span>-->
+                <!--</a>-->
+                <!--<ul id="TimeLimitlist1" class="dropdown-menu">-->
+                    <!--&lt;!&ndash; dropdown menu links &ndash;&gt;-->
+                    <!--<li><a href="#">10 Mins</a></li>-->
+                    <!--<li><a href="#">1 Hr</a></li>-->
+                    <!--<li><a href="#">5 Hrs</a></li>-->
+                    <!--<li><a href="#">10 Hrs</a></li>-->
+                    <!--<li><a href="#">1 Day</a></li>-->
+                    <!--<li><a href="#">All</a></li>-->
+                    <!--<li class="divider"></li>-->
+                    <!--&lt;!&ndash;<li><a href="#">Separated link</a></li>&ndash;&gt;-->
+                <!--</ul>-->
+                <!--</div>-->
+
+
+
+            <!--<div class="form-group" style="width:10%;margin-left: 60%">-->
+                <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>-->
+                <!--<div class="col-md-8">-->
+                    <!--<input id="Entityname1" name="Entityname" type="text" placeholder="Entityname" class="form-control">-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+
+
+
+
+
+
+
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="#">Link1</a></li>-->
+                <!--<li><a href="#">Link2</a></li>-->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu" role="menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+
+
+
+
+
+
+            <form class="navbar-form navbar-left" id="entityform" style="margin-left:1%;width: 80%" role="search">
+
+                <!--<form>-->
+                    <!--<input type="radio" id="oneentity" name="1 entity" value="1 Entity">1 Entity<br>-->
+                    <!--<input type="radio" id="twoentities" name="2 entities" value="2 Entities">2 Entities-->
+                <!--</form>-->
+
+
+                <div class="form-group" style=" width: 19%">
+                    <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname1" id="tags1" class="form-control input-lg"  placeholder="Entity 1">
+
+                    </div>
+                </div>
+
+
+                <!--<div  id="first" style=" margin-top: 2%; margin-right: 20px" class="form-group">-->
+                    <!--<label for="tags2">Entity 1</label>-->
+                    <!--<input placeholder="Entity" id="tags2" >-->
+                <!--</div>-->
+
+                <!--<div id="second" style=" margin-top: 2%;" class="form-group">-->
+                    <!--<label for="tags1">Entity 2</label>-->
+                    <!--<input placeholder="Entity" id="tags1" >-->
+                <!--</div>-->
+
+                <div class="form-group" style=" width: 19%">
+                    <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname1" id="tags2" class="form-control input-lg"  placeholder="Entity 2">
+
+                    </div>
+                </div>
+
+
+                <div class="form-group" style=" margin-left: 5%; width: 19%">
+                    <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname1" id="startdate" class="form-control input-lg"  placeholder="Start Date">
+
+                    </div>
+                </div>
+
+                <div class="form-group" style="   width: 19%">
+                    <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname1" id="enddate" class="form-control input-lg"  placeholder="End Date">
+
+                    </div>
+                </div>
+
+
+                <div class="btn-group" id="list1" style="margin-left:5%;width: 10%; margin-right: 0%">
+                    <a class="btn btn-primary btn-lg btn-block" id="list2" style=" margin-top: 1%; margin-left: 0%;" data-toggle="dropdown" href="#">
+                        Format
+                        <span class="caret"></span>
+                    </a>
+                    <ul id="Maplist1" class="dropdown-menu">
+                        <!-- dropdown menu links -->
+                        <li>
+                            <a href="#">Map format</a>
+                        </li>
+                        <li>
+                            <a href="#">Graph Format</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+                <!--<div  id="start" style=" margin-top: 2%" class="form-group">-->
+                    <!--<label for="tags2">Start Date</label>-->
+                    <!--<input placeholder="Date" id="startdate" >-->
+                <!--</div>-->
+
+
+                <!--<div  id="end" style=" margin-top: 2%" class="form-group">-->
+                    <!--<label for="tags2">End Date</label>-->
+                    <!--<input placeholder="Date" id="enddate" >-->
+                <!--</div>-->
+
+
+                <!--<div class="form-group">-->
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+            </form>
+
+
+            <ul  style="width: 15%" class="nav navbar-nav navbar-right">
+                <div id="go1" class="form-group" style=" margin-left:0%; width: 50%; margin-top:3%; margin-right: 10%">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" id="goair"  class="btn btn-primary btn-lg">GO</button>
+                    </div>
+                </div>
+
+
+
+                <li><a href="#">Logout</a></li>
+                <!--<div class="form-group">-->
+                    <!--<div style="margin-top: 5%" class="col-md-6 text-center">-->
+                        <!--<button type="submit" id="logout" class="btn btn-primary btn-lg">Logout</button>-->
+                    <!--</div>-->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu" role="menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<!--<div style="width: 100px" class="form-group">-->
+    <!--<div class="col-md-12 text-center">-->
+        <!--<button id="myflag3" type="submit" class="btn btn-primary btn-lg">Submit</button>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!--<div class="btn-group">-->
+    <!--<a class="btn btn-primary btn-lg btn-block" id="myflag2" style="width: 200px;margin-top: 5%; margin-left: 25%;" data-toggle="dropdown" href="#">-->
+        <!--Add Entity-->
+        <!--<span class="caret"></span>-->
+    <!--</a>-->
+    <!--<ul id="TimeLimitlist2" class="dropdown-menu">-->
+        <!--<!-- dropdown menu links-->
+
+        <!--<li>-->
+            <form class="form-horizontal" style="width: 20%;" method="post">
+                <fieldset>
+                    <legend class="text-center header" >Add Entity</legend>
+
+                    <div class="form-group">
+                        <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                        <div class="col-md-8">
+                            <input id="Entityname" name="Entityname" type="text" placeholder="Entityname" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                        <div class="col-md-8">
+                            <input type="Modelname1" name="Modelname1" id="Modelname1" class="form-control input-lg"  placeholder="Modelname1">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                        <div class="col-md-8">
+                            <input type="Modelname2" name="Modelname2" id="Modelname2" class="form-control input-lg"  placeholder="Modelname2">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                        <div class="col-md-8">
+                            <input type="Modelname3" name="Modelname3" id="Modelname3" class="form-control input-lg"  placeholder="Modelname3">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+
+
+<div id='TextBoxesGroup'>
+    <div id="TextBoxDiv1">
+        <label>Textbox #1 : </label><input type='textbox' id='textbox1' >
+    </div>
+</div>
+<input type='button' value='Add Button' id='addButton'>
+<input type='button' value='Remove Button' id='removeButton'>
+<input type='button' value='Get TextBox Value' id='getButtonValue'>
+
+        <!--</li>-->
+        <!--<!--&lt;!&ndash;<li><a href="#">10 Mins</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">1 Hr</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">5 Hrs</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">10 Hrs</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">1 Day</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">All</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">Separated link</a></li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+
+
+<div class="modal-body row" style="top: 20px;">
+<!--<div class="page-header">-->
+<!--<h1>Contact Form <small>Bootstrap template, demonstrating a single contact form</small></h1>-->
+<!--</div>-->
+
+<!-- Contact Form - START -->
+<div class=".first-column" style="top:20%;width: 20%;float: left;">
+    <script>
+        console.log("asd");
+    </script>
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<div class="well well-sm">-->
+                <!--<form class="form-horizontal" method="post">-->
+                    <!--<fieldset>-->
+                        <!--<legend class="text-center header" >Add Entity</legend>-->
+
+                        <!--<div class="form-group">-->
+                            <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>-->
+                            <!--<div class="col-md-8">-->
+                                <!--<input id="Entityname" name="Entityname" type="text" placeholder="Entityname" class="form-control">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+                            <!--<div class="col-md-8">-->
+                                <!--<input type="Modelname1" name="Modelname1" id="Modelname1" class="form-control input-lg"  placeholder="Modelname1">-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="form-group">-->
+                            <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+                            <!--<div class="col-md-8">-->
+                                <!--<input type="Modelname2" name="Modelname2" id="Modelname2" class="form-control input-lg"  placeholder="Modelname2">-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="form-group">-->
+                            <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>-->
+                            <!--<div class="col-md-8">-->
+                                <!--<input type="Modelname3" name="Modelname3" id="Modelname3" class="form-control input-lg"  placeholder="Modelname3">-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-md-12 text-center">-->
+                                <!--<button type="submit" class="btn btn-primary btn-lg">Submit</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</fieldset>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+
+<!-- Contact Form - END -->
+
+
+
+
+
+
+<div  class=".second-column" style="position: relative;top:50px;width: 70%;float: right;">
+    <script>
+        console.log("asd1");
+    </script>
+    <!--<div align="center" class="ui-widget">-->
+        <!--<label for="tags2">Entities being monitored</label>-->
+        <!--<input id="tags2" >-->
+
+
+
+
+        <div class="btn-group">
+            <a class="btn btn-primary btn-lg btn-block" id="myflag" style="padding: 10px; margin-left: 20px;" data-toggle="dropdown" href="#">
+                Time Limit
+                <span class="caret"></span>
+            </a>
+            <ul id="TimeLimitlist" class="dropdown-menu">
+                <!-- dropdown menu links -->
+                <li><a href="#">10 Mins</a></li>
+                <li><a href="#">1 Hr</a></li>
+                <li><a href="#">5 Hrs</a></li>
+                <li><a href="#">10 Hrs</a></li>
+                <li><a href="#">1 Day</a></li>
+                <li><a href="#">All</a></li>
+                <li class="divider"></li>
+                <!--<li><a href="#">Separated link</a></li>-->
+            </ul>
+            <script>
+                $('a').click(function(){
+                    value = $(this).text();
+                    //console.log(value);
+                    //alert(value);
+
+                });
+            </script>
+        </div>
+
+        <div class="btn-group">
+            <a class="btn btn-primary btn-lg btn-block"  style="padding: 10px; margin-left: 20px;" data-toggle="dropdown" href="#">
+                Features
+                <span class="caret"></span>
+            </a>
+            <ul id="Maplist" class="dropdown-menu">
+                <!-- dropdown menu links -->
+                <li>
+                    <a href="#">TweetCount</a>
+                </li>
+                <!--<ul class="dropdown-submenu">-->
+                <!--<li><a href="#">Map</a></li>-->
+                <!--<li><a href="#">Graph</a></li>-->
+                <!--</ul>-->
+                <!--<script>-->
+                <!--$('a').click(function(){-->
+                <!--maporgraph = $(this).text();-->
+                <!--console.log(maporgraph);-->
+                <!--//features="Tweet Count";-->
+                <!--});-->
+                <!--</script>-->
+
+                <li><a href="#">SentimentScore</a></li>
+                <!--<ul class="dropdown-submenu">-->
+                <!--<li><a href="#">Map</a></li>-->
+                <!--<li><a href="#">Graph</a></li>-->
+                <!--</ul>-->
+                <!--<script>-->
+                <!--$('a').click(function(){-->
+                <!--maporgraph = $(this).text();-->
+                <!--console.log(maporgraph);-->
+                <!--//features="Sentiment Score";-->
+                <!--});-->
+                <!--</script>-->
+                <li><a href="#">MostTrendingTopics</a></li>
+                <li><a href="#">MostInfluentialUsers</a></li>
+
+                <!--<li><a href="#">Separated link</a></li>-->
+            </ul>
+            <script>
+                $('#Maplist li a').click(function(){
+                    features = $(this).text();
+                    console.log(features);
+                    function loaded () {
+
+                        document.getElementById("myHperlink").innerHTML = features;
+
+                    }
+
+//                        var containernew=document.createElement('div');
+//                        containernew.setAttribute("id","containernew");
+//                        containernew.setAttribute('class','form-group');
+//                        containernew.style.align="center";
+//                        document.documentElement.appendChild(containernew);
+//
+
+//                        var button=document.createElement('button');
+//                        button.setAttribute("id",features);
+//                        console.log("printing the button id");
+//                        console.log(button.id);
+//                        //button.setAttribute('class','buttonclass');
+//                        button.style.position="relative";
+//                        button.style.left="50px";
+//                        button.style.margin="20px";
+//                        button.style.marginBottom="20px";
+//                        button.style.width="10%";
+//                        button.style.padding="10px";
+//                        button.style.color="blue";
+//                        button.class="btn btn-primary btn-lg btn-block";
+//                        button.innerHTML="GO";
+//                        console.log("In");
+//                        //console.log(features);
+//                        $("#containernew").append(button);
+                    console.log("Inside");
+
+                    var container=document.createElement('div');
+                    container.setAttribute("id","container");
+                    container.style.position="relative";
+                    container.style.height="700px";
+                    container.style.minWidth="500px";
+                    container.style.maxWidth="2000px";
+                    $("#world").append(container);
+
+                    console.log("Inside here");
+
+
+
+
+
+
+                    //console.log(maporgraph);
+                    //console.log("qwerty");
+                    //alert(value);
+                });
+            </script>
+
+        </div>
+
+
+        <div id="world" align="center" class="form-group">
+
+            <script>
+                console.log("Inside here are");
+            </script>
+            <button id="SentimentScore" style=" position: relative; left:50px; margin:20px; margin-bottom:20px; width:10%; padding:10px"  class="btn btn-primary btn-lg btn-block">  GO</button>
+
+            <!--<button id="map" style="left: 60px" class="btn btn-primary btn-lg btn-block" > US Tweetcount  </button>-->
+            <!--<div id="container" style=" position: relative; left: 0; height:700px; min-width: 500px; max-width: 2000px; margin: 0 auto"></div>-->
+
+        </div>
+        <!--<div class="btn-toolbar">-->
+        <!--<div class="btn-group">-->
+        <!--<button class="btn btn-primary">Action</button>-->
+        <!--<button data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></button>-->
+        <!--<ul class="dropdown-menu">-->
+        <!--<li><a href="#">Action</a></li>-->
+        <!--<li><a href="#">Another action</a></li>-->
+        <!--<li class="divider"></li>-->
+        <!--<li><a href="#">Separated link</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--</div>-->
+
+
+        <!--<script language="javascript">-->
+
+        <!--function modifytagvalue() {-->
+        <!--console.log("231");-->
+        <!--var entity = $("#tags2").val();-->
+        <!--console.log(entity);-->
+        <!--//function();-->
+        <!--window.open('highchartsdemo1.html');-->
+        <!--//                    if(=="No")-->
+        <!--//                    {-->
+        <!--//                        alert("Not a valid number");-->
+        <!--//                        return false;-->
+        <!--//                    }-->
+        <!--}-->
+        <!--</script>-->
+
+    </div>
+    <!-- Your second column here -->
+</div>
+</div>
+
+
+
+</body>
+</html>

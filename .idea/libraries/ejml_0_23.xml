@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="ejml-0.23">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16/ejml-0.23.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16/javax.json.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16/joda-time.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16/jollyday.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16" />
+      <root url="jar://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16/stanford-corenlp-3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16/stanford-corenlp-3.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16" />
+      <root url="file://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16" />
+      <root url="jar://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16/stanford-corenlp-3.4-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/stanford-corenlp-full-2014-06-16/stanford-corenlp-full-2014-06-16" recursive="false" type="SOURCES" />
+  </library>
+</component>

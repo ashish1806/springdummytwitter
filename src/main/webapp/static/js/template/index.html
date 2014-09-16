@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--<script src="jquery-1.10.2.min.js"></script>-->
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/mapdata/countries/in/in-all.js"></script>
+    <script src="http://code.highcharts.com/mapdata/countries/pk/pk-all.js"></script>
+    <script src="http://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/mapdata/countries/in/in-all.js"></script>
+    <script src="http://code.highcharts.com/mapdata/countries/pk/pk-all.js"></script>
+    <script src="http://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+    <script src="http://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="http://code.highcharts.com/mapdata/custom/world.js"></script>
+
+    <!--<script src="USA.js"></script>-->
+    <!--<script src="World1.js"></script>-->
+    <!---->
+    <!--<script src="WORLD.js"></script>-->
+    <link href="css/plugins/timeline.css" rel="stylesheet">
+
+    <!--<link href="css/plugins/morris.css" rel="stylesheet">-->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+    <script src="js/sb-admin-2.js"></script>
+
+    <!--<script src="dropdown.js"></script>-->
+
+    <!--<script src="addentity.js"></script>-->
+
+    <!--<script src="dashboardstyle.css"></script>-->
+    <!--<script src="showhide.js"></script>-->
+    <!--<script src="addremovebutton.js"></script>-->
+    <!--<script src="scroll.js"></script>-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="jqueryCalendar.css">
+
+    <script src="senddata.js"></script>
+
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="autocomplete.js"></script>
+    <!--<script src="demo21431.js"></script>-->
+    <script type="text/javascript">
+
+        $(function() {
+
+            console.log("2");
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $(document).ready(function () {
+                $("#tags1").click(function () {
+                    $("#tags1").autocomplete({
+                        source: availableTags
+                    });
+                    $("#tags2").autocomplete({
+                        source: availableTags
+                    });
+                });
+            });
+        });
+
+        $("input[type=radio]").attr('disabled', false);
+
+    </script>
+
+
+<script>
+
+    function scrollToElement(selector) {
+        var animation = {scrollTop: $(selector).offset().top};
+        $('html,body').animate(animation, 'slow', 'swing', function () {
+//
+        });
+    }
+
+        $(document).ready(function () {
+            $(function () {
+                $("#startdate").datepicker();
+            });
+        })
+    $(document).ready(function () {
+        $(function () {
+            $("#enddate").datepicker();
+        });
+    })
+    $(document).ready(function() {
+        $("#submit123456").click(function() {
+            console.log("1234567");
+            document.getElementById("divCheckbox").style.visibility="visible";
+
+//            $("#divCheckbox").visibility="visible";
+        });
+    });
+
+
+    //    $('#basicExample').timepicker();
+    $(document).ready(function () {
+        $(function () {
+            $("#starttime").timepicker();
+        });
+    })
+    $(document).ready(function () {
+        $(function () {
+            $("#endtime").timepicker();
+        });
+    })
+    </script>
+
+
+    <script>
+
+//
+    </script>
+</head>
+
+<body >
+
+
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div style="width: 40%;float: left" class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div style="background-image: url(images/twitter2.jpg);float: left; width: 81px;height: 65px">
+
+                </div>
+                <a class="navbar-brand" href="index.html">Twitter Sentiment Analyser</a>
+
+                <!--<a class="navbar-brand" style="margin-left: 30%;width:20%">Add Entity</a>-->
+            </div>
+            <!-- /.navbar-header -->
+
+            <div  style="margin-top:1%;width: 40%;float: right ">
+                <!--<legend class="text-center header" style="color: #bce8f1" class="huge">Add Entity</legend>-->
+
+
+                <form class="form-horizontal" style="width: 70%; float: left" method="post">
+
+
+
+                        <div style="width: 70%; float: left" class="form-group">
+                            <!--<span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>-->
+                            <div class="col-md-8" style="margin-left: 30%;margin-right: 30%">
+                                <input id="Entityname" name="Entityname" type="text" placeholder="Add Entity name" class="form-control">
+                            </div>
+                        </div>
+
+
+                    <div class="btn-group" style="float:right;height:10%;width:30%;" data-toggle="buttons-radio">
+                        <button type="submit" id="submit12345" style="margin-left: 0%;margin-right: 20%" class="btn btn-primary btn-lg">Submit</button>
+                       <!---<button type="button" name="att" class="btn btn-primary">Leave</button>&ndash;&gt;-->
+                    </div>
+                </form>
+
+
+
+                <ul style="width: 25%" class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="bootstraplogin.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+
+
+
+            </div>
+
+
+
+        </nav>
+
+
+<div style="height:10%;margin-top: 1%">
+        <div  style="margin-top:0%;width: 100%; float: left ">
+
+
+            <form class="form-horizontal" style="width: 100%;" method="post">
+            <fieldset>
+
+
+
+                <div class="form-group" style=" margin-left:2%; width: 15%;float: left; margin-bottom: 20px">
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname1" id="tags1" class="form-control input-lg"  placeholder="Entity 1">
+
+                    </div>
+                </div>
+
+                <div class="form-group" style=" margin-left:0%; width: 15%;float: left; margin-bottom: 20px">
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname2" id="tags2" class="form-control input-lg"  placeholder="Entity 2">
+
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="  margin-left:3%; width: 13%;float: left; margin-bottom: 20px">
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname1" id="startdate" class="form-control input-lg"  placeholder="Start Date">
+
+                    </div>
+                </div>
+
+                <div class="form-group" style="   margin-left:0%; width: 20%;float: left; margin-bottom: 20px">
+                    <div class="col-md-8" style=" width: 100%">
+
+
+
+
+                        <select class="form-control input-lg" style=" float:left;width: 50%" type="Modelname1" id="starttime">
+                            <option value="0">0:00</option>
+                            <option value="1">1:00 </option>
+                            <option value="2">2:00 </option>
+                            <option value="3">3:00 </option>
+                            <option value="4">4:00 </option>
+                            <option value="5">5:00 </option>
+                            <option value="6">6:00 </option>
+                            <option value="7">7:00 </option>
+                            <option value="8">8:00 </option>
+                            <option value="9">9:00 </option>
+                            <option value="10">10:00 </option>
+                            <option value="11">11:00 </option>
+                            <option value="12">12:00 </option>
+
+                        </select>
+
+                        <select class="form-control input-lg" style=" float: right;width: 45%" type="Modelname1" id="startampm">
+                            <option value="0">AM</option>
+                            <option value="1">PM </option>
+
+
+                        </select>
+
+                        <!--<input style=" width: 100%" type="Modelname1" id="starttime" class="form-control input-lg"  placeholder="Start Time">-->
+
+                    </div>
+                </div>
+
+
+                <div class="form-group" style="  margin-left:3%; width: 13%;float: left; margin-bottom: 20px">
+                    <div class="col-md-8" style=" width: 100%">
+                        <input style=" width: 100%" type="Modelname1" id="enddate" class="form-control input-lg"  placeholder="End Date">
+
+                    </div>
+                </div>
+
+                <div class="form-group" style="   margin-left:0%; width: 20%;float: left; margin-bottom: 20px">
+                    <div class="col-md-8" style=" width: 100%">
+                        <select class="form-control input-lg" style=" float:left;width: 50%" type="Modelname1" id="endtime">
+                            <option value="0">0:00</option>
+                            <option value="1">1:00 </option>
+                            <option value="2">2:00 </option>
+                            <option value="3">3:00 </option>
+                            <option value="4">4:00 </option>
+                            <option value="5">5:00 </option>
+                            <option value="6">6:00 </option>
+                            <option value="7">7:00 </option>
+                            <option value="8">8:00 </option>
+                            <option value="9">9:00 </option>
+                            <option value="10">10:00 </option>
+                            <option value="11">11:00 </option>
+                            <option value="12">12:00 </option>
+
+                        </select>
+
+                        <select class="form-control input-lg" style=" float: right;width: 45%" type="Modelname1" id="endampm">
+                            <option value="0">AM</option>
+                            <option value="1">PM </option>
+
+
+                        </select>
+                        <!--<input style=" width: 100%" type="Modelname1" id="endtime" class="form-control input-lg"  placeholder="End Time">-->
+
+                    </div>
+                </div>
+
+
+
+
+
+            </fieldset>
+            </form>
+
+
+        </div>
+        </div>
+
+
+
+        <div class="btn-group" style="width:50%;float:right;height:10%" id="format" data-toggle="buttons">
+
+            <label class="btn btn-default active" id="format1">
+                <input type="radio" id="singleentity" style="margin-left:5%;width: 20%;margin-right: 50%;float:left;align-content: center" vname="att"class="btn btn-primary active">Single Entity
+            </label>
+            <label class="btn btn-default" id="format2">
+                <input type="radio" id="2entities" style="margin-left:85%;width: 20%;;float:right;align-content: center" vname="att" >Entity Comparison
+            </label>
+
+
+            <!--<button type="button" onclick="scrollToElement('#world')" id="submit1234567" style="margin-left:5%;margin-right:10%; width: 20%;height:45px;;float:right;align-content: center" class="btn btn-primary btn-lg">Submit1</button>-->
+
+
+
+            <!--<button type="button" id="2entities" name="att" style="margin-left:5%;width: 30%;height:45px;;float:left;align-content: center" class="btn btn-primary">Entity comparison</button>-->
+            <button type="button" onclick="scrollToElement('#world')" id="submit123456" style="margin-left:5%;margin-right:10%; width: 20%;height:45px;;float:right;align-content: center" class="btn btn-primary btn-lg">Submit</button>
+
+            </div>
+
+
+                </div>
+
+    <div id="divCheckbox" style="visibility: hidden">
+
+                <div class="column" style=" width:55%;float: left; margin-left: 1%">
+                <div id="world" style="width:100%;margin-top: 5%" class="col-lg-8">
+                    <div style="" class="panel panel-default">
+
+
+                          <div style="height:10%" class="panel-heading ">
+                            <i class="fa fa-bar-chart-o fa-fw " style="width: 10%;float: left"></i> Geographical Distribution
+                              <div class="btn-group" style="float:right; margin-right:0%;width:60%;height:100%;float:right;align-self: center" data-toggle="buttons-radio">
+                                  <button type="button" id="tweetcount"  vname="att" style="float:left;width: 45%;height:40px;margin-top:-2%; align-content: center"  class="btn btn-primary">Tweet Count</button>
+                                  <button type="button" id="sentimentscore" name="att" style="float :right;width: 45%;height:40px;margin-top:-2%;align-content: center" class="btn btn-primary">Sentiment Score</button>
+                                  <!--<button type="button" name="att" class="btn btn-primary">Leave</button>-->
+                              </div>
+                              </div>
+
+
+
+                              <div id="container2"  style="position:relative;height:400px;margin-top:0%;width:100%;margin-left: 0%">
+                                  </div>
+                            <div class="pull-right">
+
+                            </div>
+
+                    </div>
+                    </div>
+
+                    <div id="world123456" style="width:100%;margin-top: 3%" class="col-lg-8">
+                        <div  class="panel panel-default">
+
+
+
+                            <div style="height: 10%" class="panel-heading ">
+                                <i class="fa fa-bar-chart-o fa-fw "style="width: 10%;float: left"></i> Line Chart
+
+
+                                <div class="btn-group" style=" margin-right:0%;width:50%;float:right;align-self: center" data-toggle="buttons-radio">
+                                    <button type="button" id="influential"  vname="att" style="float:left;width: 45%;height:40px;margin-top:-3%; align-content: center"  class="btn btn-primary">Influential Users</button>
+                                    <button type="button" id="trending" name="att" style="float :right;width: 45%;height:40px;margin-top:-3%;align-content: center" class="btn btn-primary">Trending topics</button>
+                                    <!--<button type="button" name="att" class="btn btn-primary">Leave</button>-->
+                                </div>
+                            </div>
+
+                            <div id="container3"  style="position:relative;height:400px;margin-top:0%;width:100%;margin-left: 0%">
+                            </div>
+                            <div class="pull-right">
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    </div>
+                <div class="column" style=" float:right;width:40%; margin-left: 1%">
+
+                <div id="world12" style="margin-top:5%;height:600px;width:95%" class="col-lg-8">
+                    <div style="" class="panel panel-default">
+
+
+                        <div  class="col-md-12">
+                            <div  class="panel panel-primary">
+                                <div style="background-image: url(images/twitter.png);float: left; width: 50px;height: 40px">
+
+                                </div>
+                                <div class="panel-heading">
+
+                                    <h3 class="panel-title"> Tweets Live</h3>
+                                </div>
+                                <div class="panel-body feed">
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-comment"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">John Doe</a> commented on <a href="#">What Makes Good Code Good</a>.
+                                            </div>
+                                            <div class="time pull-left">
+                                                3 h
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Merge request #42</a> has been approved by <a href="#">Jessica Lori</a>.
+                                            </div>
+                                            <div class="time pull-left">
+                                                10 h
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-plus-square-o"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                New user <a href="#">Greg Wilson</a> registered.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Today
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-bolt"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                Server fail level raises above normal. <a href="#">See logs</a> for details.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Yesterday
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-archive"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Database usage report</a> is ready.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Yesterday
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Order #233985</a> needs additional processing.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Wednesday
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-arrow-down"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Load more...</a>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+
+                            <div class="pull-right">
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                <div id="world1234567" style="margin-top:5%;width: 95%" class="col-lg-8">
+                    <div class="panel panel-default">
+
+
+                        <div class="col-md-12">
+                            <div class="panel panel-primary">
+                                <div style="background-image: url(images/twitter.png);float: left; width: 50px;height: 40px">
+
+                                </div>
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"></i>Most Retweeted</h3>
+                                </div>
+                                <div class="panel-body feed">
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-comment"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">John Doe</a> commented on <a href="#">What Makes Good Code Good</a>.
+                                            </div>
+                                            <div class="time pull-left">
+                                                3 h
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Merge request #42</a> has been approved by <a href="#">Jessica Lori</a>.
+                                            </div>
+                                            <div class="time pull-left">
+                                                10 h
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-plus-square-o"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                New user <a href="#">Greg Wilson</a> registered.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Today
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-bolt"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                Server fail level raises above normal. <a href="#">See logs</a> for details.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Yesterday
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-archive"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Database usage report</a> is ready.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Yesterday
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Order #233985</a> needs additional processing.
+                                            </div>
+                                            <div class="time pull-left">
+                                                Wednesday
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="feed-item">
+                                        <div class="icon pull-left">
+                                            <i class="fa fa-arrow-down"></i>
+                                        </div>
+                                        <div class="feed-item-body">
+                                            <div class="text">
+                                                <a href="#">Load more...</a>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="pull-right">
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                </div>
+
+
+    <!--<div class="row" style=" margin-left: 1%">-->
+
+        <!--<div id="world123456" style="width: 60%;margin-top: 5%" class="col-lg-8">-->
+            <!--<div  class="panel panel-default">-->
+
+
+
+                <!--<div style="height: 10%" class="panel-heading ">-->
+                    <!--<i class="fa fa-bar-chart-o fa-fw "style="width: 10%;float: left"></i> Line Chart-->
+
+
+                <!--<div class="btn-group" style=" margin-right:0%;width:50%;float:right;align-self: center" data-toggle="buttons-radio">-->
+                    <!--<button type="button" id="influential"  vname="att" style="float:left;width: 45%;height:40px;margin-top:-3%; align-content: center"  class="btn btn-primary">Influential Users</button>-->
+                    <!--<button type="button" id="trending" name="att" style="float :right;width: 45%;height:40px;margin-top:-3%;align-content: center" class="btn btn-primary">Trending topics</button>-->
+                    <!--&lt;!&ndash;<button type="button" name="att" class="btn btn-primary">Leave</button>&ndash;&gt;-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--<div id="container3"  style="position:relative;height:400px;margin-top:0%;width:100%;margin-left: 0%">-->
+                <!--</div>-->
+                <!--<div class="pull-right">-->
+
+
+                <!--</div>-->
+
+
+            <!--</div>-->
+        <!--</div>-->
+
+
+</div>
+
+
+                </div>
+
+
+
+                    <!--<div class="panel panel-default" style="margin-top: 5%">-->
+                        <!--<div class="panel-heading">-->
+                            <!--<i class="fa fa-clock-o fa-fw"></i> Responsive Timeline-->
+                        <!--</div>-->
+                        <!--<!-- /.panel-heading -->
+                        <!--<div class="panel-body">-->
+                            <!--<ul class="timeline">-->
+                                <!--<li>-->
+                                    <!--<div class="timeline-badge"><i class="fa fa-check"></i>-->
+                                    <!--</div>-->
+                                    <!--<div class="timeline-panel">-->
+                                        <!--<div class="timeline-heading">-->
+                                            <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+                                            <!--<p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter</small>-->
+                                            <!--</p>-->
+                                        <!--</div>-->
+                                        <!--<div class="timeline-body">-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="timeline-inverted">-->
+                                    <!--<div class="timeline-badge warning"><i class="fa fa-credit-card"></i>-->
+                                    <!--</div>-->
+                                    <!--<div class="timeline-panel">-->
+                                        <!--<div class="timeline-heading">-->
+                                            <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="timeline-body">-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.</p>-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<div class="timeline-badge danger"><i class="fa fa-bomb"></i>-->
+                                    <!--</div>-->
+                                    <!--<div class="timeline-panel">-->
+                                        <!--<div class="timeline-heading">-->
+                                            <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="timeline-body">-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="timeline-inverted">-->
+                                    <!--<div class="timeline-panel">-->
+                                        <!--<div class="timeline-heading">-->
+                                            <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="timeline-body">-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<div class="timeline-badge info"><i class="fa fa-save"></i>-->
+                                    <!--</div>-->
+                                    <!--<div class="timeline-panel">-->
+                                        <!--<div class="timeline-heading">-->
+                                            <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="timeline-body">-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>-->
+                                            <!--<hr>-->
+                                            <!--<div class="btn-group">-->
+                                                <!--<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">-->
+                                                    <!--<i class="fa fa-gear"></i>  <span class="caret"></span>-->
+                                                <!--</button>-->
+                                                <!--<ul class="dropdown-menu" role="menu">-->
+                                                    <!--<li><a href="#">Action</a>-->
+                                                    <!--</li>-->
+                                                    <!--<li><a href="#">Another action</a>-->
+                                                    <!--</li>-->
+                                                    <!--<li><a href="#">Something else here</a>-->
+                                                    <!--</li>-->
+                                                    <!--<li class="divider"></li>-->
+                                                    <!--<li><a href="#">Separated link</a>-->
+                                                    <!--</li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<div class="timeline-panel">-->
+                                        <!--<div class="timeline-heading">-->
+                                            <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="timeline-body">-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                                <!--<li class="timeline-inverted">-->
+                                    <!--<div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>-->
+                                    <!--</div>-->
+                                    <!--<div class="timeline-panel">-->
+                                        <!--<div class="timeline-heading">-->
+                                            <!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="timeline-body">-->
+                                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                        <!--<!-- /.panel-body -->
+
+
+
+
+                <div class="col-lg-4">
+
+                    <div class="chat-panel panel panel-default">
+
+                    </div>
+
+                </div>
+
+</body>
+
+</html>
